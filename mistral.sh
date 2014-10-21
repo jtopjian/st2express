@@ -1,5 +1,6 @@
 config=/etc/mistral/mistral.conf
 upstart=/etc/init/mistral.conf
+DBHOST="127.0.0.1"
 
 write_config()
 {
@@ -9,7 +10,7 @@ fi
 touch $config
 cat <<mistral_config >$config
 [database]
-connection = mysql://mistral:mistral@controller/mistral
+connection = mysql://mistral:mistral@${DBHOST}/mistral
 
 [pecan]
 auth_enable=false
