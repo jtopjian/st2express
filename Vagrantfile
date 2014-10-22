@@ -9,13 +9,13 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
  
     config.vm.box = "ubuntu/trusty64"
-    config.vm.hostname = "st2"
+    config.vm.hostname = "st2express"
  
-    config.vm.define "st2" do |q|
+    config.vm.define "st2express" do |q|
     end
  
     config.vm.provider :virtualbox do |vb|
-      vb.name = "st2"
+      vb.name = "st2express"
       vb.memory = 2048
       vb.cpus = 1
     end
