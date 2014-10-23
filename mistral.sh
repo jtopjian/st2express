@@ -32,7 +32,7 @@ mistral_upstart
 }
 
 setup_mistral_db() {
-  mysql -uroot -pStackStorm -e "create database mistral"
+  mysql -uroot -pStackStorm -e "create database if not exists mistral"
   mysql -uroot -pStackStorm -e "grant all privileges on mistral.* to 'mistral'@'%' identified by 'mistral'"
 }
 
