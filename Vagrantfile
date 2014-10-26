@@ -27,4 +27,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.provision :shell, :path => "mistral.sh"
     config.vm.provision :shell, :inline => "curl -sS -k -O https://ops.stackstorm.net/releases/st2/scripts/st2_deploy.sh"
     config.vm.provision :shell, :inline => "bash st2_deploy.sh #{st2ver}"
+    config.vm.provision :shell, :path => "rsyslog.sh"
 end
