@@ -70,7 +70,7 @@ install_mistral() {
 }
 
 # Run mysql install script
-. /vagrant/mysql.sh
+. /vagrant/support/mysql.sh
 
 install_mistral
 sudo pip install -U git+https://github.com/stackforge/python-mistralclient.git

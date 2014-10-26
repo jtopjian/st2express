@@ -12,7 +12,7 @@ sed -i "s~#\$ModLoad imudp~\$ModLoad imudp~" /etc/rsyslog.conf
 sed -i "s~#\$UDPServerRun 514~\$UDPServerRun 514~" /etc/rsyslog.conf
 
 echo "########## Copy st2 Syslog config file in place ##########"
-cp /vagrant/10-st2.syslog.conf /etc/rsyslog.d/
+cp /vagrant/support/10-st2.syslog.conf /etc/rsyslog.d/
 
 # Restart rsyslog & st2
 rm -Rf /var/log/st2/*
